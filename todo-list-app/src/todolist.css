@@ -1,0 +1,210 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+  font-family: sans-serif;
+}
+
+/* Wrapper to center the todo-container */
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the TODO list */
+.todo-container {
+  width: 200%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Title */
+.todo-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;  /* changed from default */
+}
+
+
+/* Input group */
+.input-group {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+/* Input field */
+.todo-input {
+  flex: 1;
+  padding: 13px;
+  font-size: 14px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+}
+
+/* Add button */
+.add-button {
+  background-color: #f5a623;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Task item */
+.task {
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.505); /* 0.2 is opacity, adjust as needed */
+  color: #000;
+}
+
+/* Scrollable task list when more than 5 tasks */
+/* Scrollable task list when more than 5 tasks - with hidden scrollbars */
+.task-list {
+  max-height: 280px; /* Height for around 5 tasks */
+  overflow-y: auto;
+  margin-bottom: 10px;
+
+  /* Hide scrollbar - Chrome, Safari and Opera */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.task-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+/* Remove default appearance */
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #565656; /* outline color */
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent; /* no fill */
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Checkmark - using ::after pseudo-element */
+.checkbox:checked {
+  background-color: transparent; /* keep background transparent */
+  border-color: #565656; /* border color */
+}
+
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid #f5a623;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Optional: hover effect */
+.checkbox:hover {
+  border-color: #565656;
+}
+
+
+/* Task text */
+/* Task text */
+.task-text {
+  flex: 1;
+  font-weight: normal; /* changed from bold */
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif; /* added font family */
+}
+
+
+/* Completed task style */
+.task-text.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Delete button */
+.delete-button {
+  background-color: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.delete-button:hover {
+  color: #ff4d4d;
+}
+
+
+/* Animation for new tasks */
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+/* Checkbox toggle animation */
+.checked-task {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #aaa !important;
+  transform: scale(1.02);
+}
+
+/* Button click animation */
+.add-button.clicked {
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
