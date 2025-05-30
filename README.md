@@ -29,3 +29,9 @@ git clone https://github.com/hrvy821/VALENTINO-TODOLIST
 cd your-repo-name
 npm install
 npm start
+
+```
+
+## Developer
+VALENTINO, MARTIN LOUIS M.
+BSIT-3B
