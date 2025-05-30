@@ -1,6 +1,6 @@
 # React Todo List App
 
-A lightweight and intuitive Todo List application built using ReactJS. Easily add, complete, and remove tasks with a smooth, responsive interface designed for productivity and ease of use.
+A lightweight and intuitive Todo List application built using ReactJS. Easily add, complete, and remove tasks with a smooth designed for productivity and ease of use.
 
 ## 🚀 Live Demo
 
@@ -12,7 +12,6 @@ A lightweight and intuitive Todo List application built using ReactJS. Easily ad
 - 📝 Display a list of tasks
 - 🔁 Mark tasks as completed (toggle checkbox)
 - ❌ Optional: Delete tasks
-- 📱 Responsive design
 - 🌐 Deployed with Vercel
 
 ## 🛠️ Built With
@@ -26,7 +25,7 @@ A lightweight and intuitive Todo List application built using ReactJS. Easily ad
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/hrvy821/VALENTINO-TODOLIST
 cd your-repo-name
 npm install
 npm start
